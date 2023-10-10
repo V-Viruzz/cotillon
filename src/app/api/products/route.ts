@@ -1,10 +1,9 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { NextResponse } from 'next/server'
+import { NextResponse, type NextRequest } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 
 const { NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY } = process.env
 
-export async function GET (req: NextApiRequest, res: NextApiResponse) {
+export async function GET (req: NextRequest, res: NextResponse) {
   const { searchParams } = new URL(req.url ?? '')
   const category = searchParams.get('category')
   const nameProduct = searchParams.get('name')

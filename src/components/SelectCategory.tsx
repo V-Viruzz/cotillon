@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect, useId } from 'react'
 import { useRouter } from 'next/navigation'
+import { CATEGORY } from '@/static/category'
 
 function SelectCategory () {
   const router = useRouter()
@@ -29,10 +30,10 @@ function SelectCategory () {
         onChange={handleChange}
       >
 
-        <option value="globos">Globos</option>
-        <option value="cumpleanos">Art - Feliz Cumpleaños</option>
-        <option value="reposteria">Reposteria</option>
-        <option value="descartable">Descartables</option>
+        <option value={CATEGORY.GLOBOS}>Globos</option>
+        <option value={CATEGORY.ART_FELIZ_CUMPLEANOS}>Art - Feliz Cumpleaños</option>
+        <option value={CATEGORY.REPOSTERIA}>Reposteria</option>
+        <option value={CATEGORY.DESCARTABLES}>Descartables</option>
       </select>
     </div>
   )

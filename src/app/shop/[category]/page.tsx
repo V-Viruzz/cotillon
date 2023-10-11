@@ -1,8 +1,10 @@
 import React from 'react'
 import ViewProducts from '@/components/ViewProducts'
 
+const { NEXT_PUBLIC_DOMAIN } = process.env
+
 async function loadPost (params: any) {
-  const res = await fetch(`http://localhost:3000/api/products?category=${params}`)
+  const res = await fetch(`${NEXT_PUBLIC_DOMAIN}/api/products?category=${params}`)
   const data = await res.json()
   return data
 }

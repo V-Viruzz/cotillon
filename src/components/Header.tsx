@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import Logo from '@/assets/logo-s.png'
+import Logo from '@/../public/image/logo-s.webp'
 import ButtonsNav from '@/components/ButtonsNav'
 
 function Header () {
@@ -33,7 +33,8 @@ function Header () {
               src={Logo}
               width={110}
               height={110}
-              alt="Picture of the author"
+              priority={true}
+              alt="logo"
             />
           </Link>
         </div>

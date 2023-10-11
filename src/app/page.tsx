@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Logo from '@/assets/logo-page.png'
+import Logo from '@/../public/image/logo-page.webp'
 import Category from '@/components/Category'
 
 export default function Home () {
@@ -8,8 +8,12 @@ export default function Home () {
       <div className='flex justify-center overflow-hidden'>
         <Image
           className='max-w-[230%] sm:max-w-[210%] md:max-w-[170%] lg:max-w-[130%] xl:max-w-[100%] transition-all'
+          width={2320}
+          height={1080}
+          quality={100}
+          priority={true}
           src={Logo}
-          alt="Picture of the author"
+          alt="logo page"
         />
       </div>
       <Category />

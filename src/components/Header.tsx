@@ -10,17 +10,17 @@ function Header () {
       <div className='md:grid-cols-3 grid grid-cols-2  h-full w-full relative'>
         <nav className='hidden md:flex md:items-center'>
           <ul className='flex gap-9 text-xl font-semibold'>
-            <li>
+            <li className='transition-colors duration-75 hover:text-[#49b5f6]'>
               <Link href='/'>
                 Inicio
               </Link>
             </li>
-            <li>
+            <li className='transition-colors duration-75 hover:text-[#49b5f6]'>
               <Link href='/shop'>
                 Tienda
               </Link>
             </li>
-            <li>
+            <li className='transition-colors duration-75 hover:text-[#49b5f6]'>
               <Link href='/contact'>
                 Contacto
               </Link>

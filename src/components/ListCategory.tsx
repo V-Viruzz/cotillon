@@ -9,16 +9,16 @@ function ListCategory () {
     <>
       <h3 className='text-xl text-[#49b5f6]'>Categorias</h3>
       <ul>
-        <li className='hover:text-[#49b5f6] cursor-pointer' onClick={() => { router.push(`/shop/${CATEGORY.GLOBOS}`) }}>
+        <li className='hover:text-[#49b5f6] transition-colors duration-75 cursor-pointer' onClick={() => { router.push(`/shop/${CATEGORY.GLOBOS}`) }}>
           Globos
         </li>
-        <li className='hover:text-[#49b5f6] cursor-pointer' onClick={() => { router.push(`/shop/${CATEGORY.DESCARTABLES}`) }}>
+        <li className='hover:text-[#49b5f6] transition-colors duration-75 cursor-pointer' onClick={() => { router.push(`/shop/${CATEGORY.DESCARTABLES}`) }}>
           Descartables
         </li>
-        <li className='hover:text-[#49b5f6] cursor-pointer' onClick={() => { router.push(`/shop/${CATEGORY.REPOSTERIA}`) }}>
+        <li className='hover:text-[#49b5f6] transition-colors duration-75 cursor-pointer' onClick={() => { router.push(`/shop/${CATEGORY.REPOSTERIA}`) }}>
           Reposteria
         </li>
-        <li className='hover:text-[#49b5f6] cursor-pointer' onClick={() => { router.push(`/shop/${CATEGORY.ART_FELIZ_CUMPLEANOS}`) }}>
+        <li className='hover:text-[#49b5f6] transition-colors duration-75 cursor-pointer' onClick={() => { router.push(`/shop/${CATEGORY.ART_FELIZ_CUMPLEANOS}`) }}>
           Art. feliz cumpleaños
         </li>
       </ul>

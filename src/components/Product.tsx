@@ -13,7 +13,7 @@ function Product ({ id, image, name, price }: Props) {
   const [isLoiding, setIsLoiding] = useState(true)
 
   return (
-    <li className="rounded-xl shadow-lg" key={id}>
+    <li className="rounded-xl" key={id}>
 
       <div className='overflow-hidden rounded-xl'>
         <Image

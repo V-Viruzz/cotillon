@@ -22,7 +22,7 @@ function SearchBar ({ searchRef, isHidden, setHidden }: Props) {
   const handleSubmit = (e: FormEvent): void => {
     e.preventDefault()
     const value = searchRef.current.value
-    router.push(`/shop?name=${value}`)
+    router.push(`/shop?page=1&name=${value}`)
   }
 
   return (

@@ -7,6 +7,8 @@ export async function GET (req: NextRequest, res: NextResponse) {
   const { searchParams } = new URL(req.url ?? '')
   const category = searchParams.get('category')
   const nameProduct = searchParams.get('name')
+  const page = Number(searchParams.get('page'))
+  const limit = 4
 
   const supabase = createClient(NEXT_PUBLIC_SUPABASE_URL ?? '', SUPABASE_SERVICE_ROLE_KEY ?? '')
 
@@ -15,7 +17,7 @@ export async function GET (req: NextRequest, res: NextResponse) {
       .from('products')
       .select()
       .eq('category', category)
-      .range(0, 99)
+      .range((page - 1) * limit, page * limit - 1)
 
     return NextResponse.json(products)
   } else if (nameProduct !== null) {
@@ -23,7 +25,14 @@ export async function GET (req: NextRequest, res: NextResponse) {
       .from('products')
       .select()
       .ilike('name', `%${nameProduct}%`)
-      .range(0, 99)
+      .range((page - 1) * limit, page * limit - 1)
+
+    return NextResponse.json(products)
+  } else if (page !== 0) {
+    const { data: products } = await supabase
+      .from('products')
+      .select()
+      .range((page - 1) * limit, page * limit - 1)
 
     return NextResponse.json(products)
   }

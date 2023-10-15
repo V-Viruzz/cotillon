@@ -3,6 +3,7 @@ const nextConfig = {
   images: {
     domains: ['wnoztglxnuskuorwudzj.supabase.co'], // Agrega el dominio aquí
   },
+  
 }
 
 module.exports = nextConfig

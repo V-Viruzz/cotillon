@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Logo from '@/../public/image/logo-page.webp'
 import Category from '@/components/Category'
+import PopularProducts from '@/components/PopularProducts'
 
 export default function Home () {
   return (
@@ -17,6 +18,7 @@ export default function Home () {
         />
       </div>
       <Category />
+      <PopularProducts />
     </main>
   )
 }

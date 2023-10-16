@@ -12,7 +12,7 @@ function SearchBar ({ searchRef, isHidden, setHidden }: Props) {
   const router = useRouter()
 
   const handleBlur = () => {
-    if (searchRef.current.value === '') return
+    // if (searchRef.current.value === '') return
 
     setTimeout(() => {
       setHidden(true)

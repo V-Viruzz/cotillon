@@ -30,6 +30,7 @@ function ViewProducts ({ data, category }: Props) {
                       image={item.image}
                       name={item.name}
                       price={item.price}
+                      description={item.description}
                     />
                   )
                 })

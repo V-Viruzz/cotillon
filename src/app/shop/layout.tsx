@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import ListCategory from '@/components/ListCategory'
 import SelectCategory from '@/components/SelectCategory'
+import Loading from '@/components/Loading'
 
 function page ({ children }: { children: React.ReactNode }) {
   return (
@@ -12,7 +13,9 @@ function page ({ children }: { children: React.ReactNode }) {
       <section className='text-sm grid place-content-center md:hidden my-5'>
         <SelectCategory />
       </section>
-      {children}
+      <Suspense fallback={<Loading />}>
+        {children}
+      </Suspense>
     </main>
   )
 }

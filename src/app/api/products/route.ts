@@ -8,7 +8,7 @@ export async function GET (req: NextRequest, res: NextResponse) {
   const category = searchParams.get('category')
   const nameProduct = searchParams.get('name')
   const page = Number(searchParams.get('page'))
-  const limit = 4
+  const limit = 8
 
   const supabase = createClient(NEXT_PUBLIC_SUPABASE_URL ?? '', SUPABASE_SERVICE_ROLE_KEY ?? '')
 

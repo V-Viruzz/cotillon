@@ -13,6 +13,7 @@ export default function Home () {
           height={1080}
           quality={100}
           priority={true}
+          placeholder="blur"
           src={Logo}
           alt="logo page"
         />

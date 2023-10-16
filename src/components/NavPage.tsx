@@ -17,7 +17,7 @@ function NavPage ({ data, initialPage = 0 }: Props) {
   const [page, setPage] = useState(initialPage)
 
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center mt-10'>
       <button
         className='px-4 py-2 dark:bg-zinc-800 bg-zinc-100  rounded-xl'
         onClick={() => {

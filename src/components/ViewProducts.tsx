@@ -1,5 +1,6 @@
 import React from 'react'
 import Product from '@/components/Product'
+import { CATEGORY } from '@/static/category'
 
 interface Props {
   data: any
@@ -7,7 +8,13 @@ interface Props {
 }
 
 function ViewProducts ({ data, category }: Props) {
-  console.log('🚀 ~ file: ViewProducts.tsx:10 ~ ViewProducts ~ data:', data)
+  const capitalizeFirstLetter = (text: string) => {
+    if (text === CATEGORY.GLOBOS) return 'Globos'
+    if (text === CATEGORY.DESCARTABLES) return 'Descartables'
+    if (text === CATEGORY.REPOSTERIA) return 'Reposteria'
+    if (text === CATEGORY.ART_FELIZ_CUMPLEANOS) return 'Art. Feliz cumpleaños'
+  }
+
   return (
     <>
       {
@@ -16,7 +23,7 @@ function ViewProducts ({ data, category }: Props) {
             {
             category !== undefined
               ? <h3 className="text-2xl font-bold mb-2">
-              {category}
+              {capitalizeFirstLetter(category)}
             </h3>
               : null
             }

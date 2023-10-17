@@ -6,10 +6,14 @@ import { redirect } from 'next/navigation'
 const { NEXT_PUBLIC_DOMAIN } = process.env
 
 async function loadPost (params: any, page = '') {
-  const searchParamsPage = page !== '' ? `&page=${page}` : ''
-  const res = await fetch(`${NEXT_PUBLIC_DOMAIN}/api/products?category=${params}${searchParamsPage}`)
-  const data = await res.json()
-  return data
+  try {
+    const searchParamsPage = page !== '' ? `&page=${page}` : ''
+    const res = await fetch(`${NEXT_PUBLIC_DOMAIN}/api/products?category=${params}${searchParamsPage}`)
+    const data = await res.json()
+    return data
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 interface Props {

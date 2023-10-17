@@ -3,7 +3,6 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
 import Footer from '@/components/Footer'
-import Head from 'next/head'
 const inter = Nunito({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -19,9 +18,6 @@ export default function RootLayout ({
 }) {
   return (
     <html lang="es">
-      <Head>
-        <meta name="google-site-verification" content="ZRyIXeC7hED6ysySoP42-3VQ_2nwF20pXrQXPyDsp1I" />
-      </Head>
       <body className={`${inter.className}`}>
         <Header />
         {children}

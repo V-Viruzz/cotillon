@@ -9,6 +9,7 @@ async function loadPost (name = '', page = '') {
   const searchParamsPage = page !== '' ? `?page=${page}` : ''
   const res = await fetch(`${NEXT_PUBLIC_DOMAIN}/api/products${searchParamsPage}${searchParamsName}`)
   const data = await res.json()
+  console.log('🚀 ~ file: page.tsx:12 ~ loadPost ~ data:', data)
 
   return data
 }

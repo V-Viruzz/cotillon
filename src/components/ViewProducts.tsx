@@ -7,6 +7,7 @@ interface Props {
 }
 
 function ViewProducts ({ data, category }: Props) {
+  console.log('🚀 ~ file: ViewProducts.tsx:10 ~ ViewProducts ~ data:', data)
   return (
     <>
       {

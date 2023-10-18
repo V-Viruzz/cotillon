@@ -4,11 +4,13 @@ import { redirect } from 'next/navigation'
 
 const { NEXT_PUBLIC_DOMAIN } = process.env
 
-async function loadPost (name = '', page = '') {
+async function getProducts (name = '', page = '') {
   try {
     const searchParamsName = name !== '' ? `&name=${name}` : ''
     const searchParamsPage = page !== '' ? `?page=${page}` : ''
-    const res = await fetch(`${NEXT_PUBLIC_DOMAIN}/api/products${searchParamsPage}${searchParamsName}`)
+    const uniqueParam = `&_=${Date.now()}`
+    const url = `${NEXT_PUBLIC_DOMAIN}/api/products${searchParamsPage}${searchParamsName}${uniqueParam}`
+    const res = await fetch(url)
     const data = await res.json()
 
     return data
@@ -27,7 +29,7 @@ interface Props {
 async function page ({ searchParams }: Props) {
   const { name, page } = searchParams
   if (page === undefined) return redirect('/shop?page=1')
-  const data = await loadPost(name, page)
+  const data = await getProducts(name, page)
 
   return (
     <section>

@@ -2,6 +2,12 @@ import React, { Suspense } from 'react'
 import ListCategory from '@/components/ListCategory'
 import SelectCategory from '@/components/SelectCategory'
 import Loading from '@/components/Loading'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Tienda',
+  description: 'Todos los productos por categoria'
+}
 
 function page ({ children }: { children: React.ReactNode }) {
   return (

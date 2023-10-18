@@ -8,7 +8,9 @@ const { NEXT_PUBLIC_DOMAIN } = process.env
 async function loadPost (params: any, page = '') {
   try {
     const searchParamsPage = page !== '' ? `&page=${page}` : ''
-    const res = await fetch(`${NEXT_PUBLIC_DOMAIN}/api/products?category=${params}${searchParamsPage}`)
+    const uniqueParam = `&_=${Date.now()}`
+    const url = `${NEXT_PUBLIC_DOMAIN}/api/products?category=${params}${searchParamsPage}${uniqueParam}`
+    const res = await fetch(url)
     const data = await res.json()
     return data
   } catch (err) {

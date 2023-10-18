@@ -23,7 +23,7 @@ function Product ({ id, image, name, price, description }: Props) {
           ${isLoiding ? 'grayscale blur-2xl scale-110' : 'grayscale-0 blur-0 scale-100'} `
           }
           src={image ?? 'https://wnoztglxnuskuorwudzj.supabase.co/storage/v1/object/public/products/icon-image-not-found-free-vector.jpg?t=2023-10-07T18%3A34%3A53.576Z'}
-          alt="Nombre del producto"
+          alt={`Producto ${name}`}
           width={400}
           height={400}
           onLoadingComplete={() => { setIsLoiding(false) }}

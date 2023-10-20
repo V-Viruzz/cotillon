@@ -6,6 +6,10 @@ function NavMenu () {
   const { isMenuHidden, setMenuHidden } = useMenuContext()
 
   const handleClick = () => {
+    const body = document.querySelector('body')
+    if (body !== null) {
+      body.style.overflow = isMenuHidden ? 'hidden' : ''
+    }
     setMenuHidden(!isMenuHidden)
   }
 

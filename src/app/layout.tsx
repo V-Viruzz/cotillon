@@ -1,11 +1,12 @@
-import Header from '@/components/Header'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
+import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 const inter = Nunito({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  icons: 'https://wnoztglxnuskuorwudzj.supabase.co/storage/v1/object/public/products/logo-s-p.webp',
   metadataBase: new URL('https://cotillonsinka.vercel.app'),
   title: 'Cotillon Sinka',
   description: 'Cotillon articulos de fiesta y reposteria',
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
       url: 'https://wnoztglxnuskuorwudzj.supabase.co/storage/v1/object/public/products/logo-page.webp',
       width: 1800,
       height: 1600,
-      alt: 'My custom alt'
+      alt: 'Logo Cotillon Sinka'
     }]
   }
 }

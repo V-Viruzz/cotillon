@@ -5,7 +5,7 @@ import FacebookIcon from './icons/FacebookIcon'
 
 function Footer () {
   return (
-    <footer className="bg-zinc-100 dark:bg-zinc-900 mt-24">
+    <footer className="bg-zinc-100 dark:bg-[#111720] mt-24">
       <div className="container px-6 py-12 mx-auto">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
           <div className="sm:col-span-2">
@@ -28,10 +28,10 @@ function Footer () {
 
             <div className="flex items-start gap-2 mt-5">
 
-              <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Facebook">
+              <a href="#" className="text-gray-600 transition-colors duration-300 dark:text-inherit hover:text-blue-500 dark:hover:text-blue-400" aria-label="Facebook">
                 <FacebookIcon width={28} height={28} />
               </a>
-              <a href="https://wa.link/wg9sol" className="text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Facebook">
+              <a href="https://wa.link/wg9sol" className="text-gray-600 transition-colors duration-300 dark:text-inherit hover:text-blue-500 dark:hover:text-blue-400" aria-label="Facebook">
                 <WhatsAppIcon width={28} height={28}/>
               </a>
 
@@ -42,8 +42,8 @@ function Footer () {
             <p className="font-semibold text-gray-800 dark:text-white">Contacto y local</p>
 
             <div className="flex flex-col items-start mt-5 space-y-2">
-              <p className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"> Retiro villa 31 - machu picchu 2656</p>
-              <p className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">+ 54 9 116931-7668</p>
+              <p className="text-gray-600 transition-colors duration-300 dark:text-inherit dark:hover:text-blue-400 hover:underline hover:text-blue-500"> Retiro villa 31 - machu picchu 2656</p>
+              <p className="text-gray-600 transition-colors duration-300 dark:text-inherit dark:hover:text-blue-400 hover:underline hover:text-blue-500">+ 54 9 116931-7668</p>
 
             </div>
           </div>

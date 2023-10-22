@@ -7,7 +7,7 @@ function ListCategory () {
 
   return (
     <>
-      <h3 className='text-xl text-[#49b5f6]'>Categorias</h3>
+      <h3 className='text-xl text-[#49b5f6] font-medium mb-3'>Categorias</h3>
       <ul>
         <li className='hover:text-[#49b5f6] transition-colors duration-75 cursor-pointer' onClick={() => { router.push(`/shop/${CATEGORY.GLOBOS}`) }}>
           Globos

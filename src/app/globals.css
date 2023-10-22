@@ -3,26 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 51, 51, 51;
-  --background-start-rgb: 255, 255, 255;
-  --background-end-rgb: 255, 255, 255;
+  color-scheme: light;
+  --foreground-rgb: rgb(51, 51, 51);
+  --background-start-rgb: rgb(255, 255, 255);
+  --background-end-rgb: rgb(255, 255, 255);
   --header-height: 5.5rem;
   --width-page: 6%
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    color-scheme: dark;
+    --foreground-rgb: rgb(148, 163, 184);
+    --background-start-rgb: rgb(22, 31, 44);
+    --background-end-rgb: rgb(22, 31, 44);
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: var(--foreground-rgb);
   background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+      var(--background-end-rgb)) var(--background-start-rgb);
 }
 
 select {
@@ -34,11 +36,5 @@ select {
 }
 
 option {
-  background-color: white;
-}
-
-@media (prefers-color-scheme: dark) {
-  option {
-    background-color: black;
-  }
+  background-color: var(--background-start-rgb);
 }

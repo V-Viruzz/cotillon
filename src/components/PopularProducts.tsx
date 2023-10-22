@@ -18,7 +18,7 @@ async function page () {
 
   return (
     <section className="mx-[--width-page] grid grid-cols-1 mt-10">
-      <h2 className='text-4xl font-bold my-5 text-center'>
+      <h2 className='text-4xl font-bold my-5 text-center dark:text-white'>
         Protuctos
         <p className='text-xl text-[#49b5f6]'>Populares</p>
       </h2>

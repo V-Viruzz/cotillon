@@ -3,13 +3,13 @@ import ViewProducts from '@/components/ViewProducts'
 import NavPage from '@/components/NavPage'
 import { redirect } from 'next/navigation'
 
+export const revalidate = 3600
 const { NEXT_PUBLIC_DOMAIN } = process.env
 
 async function loadPost (params: any, page = '') {
   try {
     const searchParamsPage = page !== '' ? `&page=${page}` : ''
-    const uniqueParam = `&_=${Date.now()}`
-    const url = `${NEXT_PUBLIC_DOMAIN}/api/products?category=${params}${searchParamsPage}${uniqueParam}`
+    const url = `${NEXT_PUBLIC_DOMAIN}/api/products?category=${params}${searchParamsPage}`
     const res = await fetch(url)
     const data = await res.json()
     return data

@@ -2,14 +2,14 @@ import NavPage from '@/components/NavPage'
 import ViewProducts from '@/components/ViewProducts'
 import { redirect } from 'next/navigation'
 
+export const revalidate = 3600
 const { NEXT_PUBLIC_DOMAIN } = process.env
 
 async function getProducts (name = '', page = '') {
   try {
     const searchParamsName = name !== '' ? `&name=${name}` : ''
     const searchParamsPage = page !== '' ? `?page=${page}` : ''
-    const uniqueParam = `&_=${Date.now()}`
-    const url = `${NEXT_PUBLIC_DOMAIN}/api/products${searchParamsPage}${searchParamsName}${uniqueParam}`
+    const url = `${NEXT_PUBLIC_DOMAIN}/api/products${searchParamsPage}${searchParamsName}`
     const res = await fetch(url)
     const data = await res.json()
 

@@ -22,7 +22,7 @@ function ViewProducts ({ data, category }: Props) {
           ? <>
             {
             category !== undefined
-              ? <h3 className="text-2xl font-bold mb-2">
+              ? <h3 className="text-2xl font-bold mb-5">
               {capitalizeFirstLetter(category)}
             </h3>
               : null

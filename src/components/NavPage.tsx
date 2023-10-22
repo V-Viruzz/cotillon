@@ -19,7 +19,7 @@ function NavPage ({ data, initialPage = 0 }: Props) {
   return (
     <div className='flex justify-center mt-10'>
       <button
-        className='px-4 py-2 dark:bg-zinc-800 bg-zinc-100  rounded-xl'
+        className='px-4 py-2 dark:bg-[#111720] bg-zinc-100  rounded-xl'
         onClick={() => {
           const num = page - 1
           if (num <= 0) return
@@ -33,7 +33,7 @@ function NavPage ({ data, initialPage = 0 }: Props) {
         {page}
       </div>
       <button
-        className='px-4 py-2 dark:bg-zinc-800 bg-zinc-100 rounded-xl'
+        className='px-4 py-2 dark:bg-[#111720] bg-zinc-100 rounded-xl'
         onClick={() => {
           const num = page + 1
           if (data.length === 0) return

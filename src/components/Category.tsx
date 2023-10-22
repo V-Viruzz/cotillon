@@ -9,7 +9,7 @@ import { CATEGORY } from '@/static/category'
 function Category () {
   return (
     <section className='mx-[--width-page] text-center'>
-      <h2 className='text-4xl font-bold my-5'>Categorias</h2>
+      <h2 className='text-4xl font-bold my-5 dark:text-white'>Categorias</h2>
 
       <div className='grid grid-cols-res gap-5 lg:grid-cols-res4x4 xl:grid-cols-res'>
         <div>

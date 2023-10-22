@@ -14,7 +14,7 @@ function NavMenu () {
   }
 
   return (
-    <nav className={`bg-white dark:bg-black z-50 w-screen h-screen mt-[var(--header-height)] fixed md:hidden ${isMenuHidden ? 'hidden' : 'block'}`}>
+    <nav className={`dark:bg-[#111720] bg-white z-50 w-screen h-screen mt-[var(--header-height)] fixed md:hidden ${isMenuHidden ? 'hidden' : 'block'}`}>
       <ul className='grid grid-cols-1 grid-rows-3 px-4 h-[20%] w-full divide-solid divide-y dark:divide-zinc-700 divide-zinc-300 font-semibold text-lg'>
 
         <li className=''>

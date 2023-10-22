@@ -11,21 +11,21 @@ function Header () {
   return (
     <>
       <MenuProvider>
-        <header className='bg-white dark:bg-black h-[var(--header-height)] px-[--width-page] w-full fixed z-10 '>
+        <header className='bg-[var(--background-start-rgb)] h-[var(--header-height)] px-[--width-page] w-full fixed z-10 shadow dark:shadow-xl'>
           <div className='md:grid-cols-3 grid grid-cols-2  h-full w-full relative'>
             <nav className='hidden md:flex md:items-center'>
               <ul className='flex gap-9 text-xl font-semibold'>
-                <li className='transition-colors duration-75 hover:text-[#49b5f6]'>
+                <li className='transition-colors duration-75 hover:text-[#49b5f6] dark:hover:text-white'>
                   <Link href='/'>
                     Inicio
                   </Link>
                 </li>
-                <li className='transition-colors duration-75 hover:text-[#49b5f6]'>
+                <li className='transition-colors duration-75 hover:text-[#49b5f6] dark:hover:text-white'>
                   <Link href='/shop'>
                     Tienda
                   </Link>
                 </li>
-                <li className='transition-colors duration-75 hover:text-[#49b5f6]'>
+                <li className='transition-colors duration-75 hover:text-[#49b5f6] dark:hover:text-white'>
                   <Link href='/contact'>
                     Contacto
                   </Link>

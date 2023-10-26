@@ -30,6 +30,8 @@ function Product ({ id, image, name, price, description }: Props) {
 
         />
         <div className='absolute w-full h-full top-0 ease-in-out duration-200 text-white bg-black opacity-0 group-hover:opacity-30 text-lg flex items-end p-5'>
+        </div>
+        <div className='absolute w-full h-full top-0 ease-in-out duration-200 text-white opacity-0 group-hover:opacity-100 text-lg flex items-end p-5'>
           <div className='opacity-0 group-hover:opacity-100 ease-in-out duration-00'>
           {description}
           </div>

@@ -9,15 +9,14 @@ function Footer () {
       <div className="container px-6 py-12 mx-auto">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
           <div className="sm:col-span-2">
-            {/* <h1 className="max-w-lg text-xl font-semibold tracking-tight text-gray-800 xl:text-2xl dark:text-white">Subscribe our newsletter to get update.</h1> */}
 
             <div className="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
               <div>
                 <Image
-                src={Logo}
-                alt='Logo'
-                width={100}
-                height={100}
+                  src={Logo}
+                  alt='Logo'
+                  width={100}
+                  height={100}
                 />
               </div>
             </div>
@@ -32,7 +31,7 @@ function Footer () {
                 <FacebookIcon width={28} height={28} />
               </a>
               <a href="https://wa.link/wg9sol" className="text-gray-600 transition-colors duration-300 dark:text-inherit hover:text-blue-500 dark:hover:text-blue-400" aria-label="Facebook">
-                <WhatsAppIcon width={28} height={28}/>
+                <WhatsAppIcon width={28} height={28} />
               </a>
 
             </div>

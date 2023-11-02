@@ -28,7 +28,7 @@ function ViewProducts ({ data, category }: Props) {
               : null
             }
 
-            <ul className="grid grid-cols-res gap-8">
+            <ul className="grid grid-cols-res xl:grid-cols-3 2xl:grid-cols-res gap-8">
               {
                 data.map((item: any) => {
                   return (

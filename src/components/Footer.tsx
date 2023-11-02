@@ -6,7 +6,7 @@ import FacebookIcon from './icons/FacebookIcon'
 function Footer () {
   return (
     <footer className="bg-zinc-100 dark:bg-[#111720] mt-24">
-      <div className="container px-6 py-12 mx-auto">
+      <div className="  py-12 mx-[var(--width-page)]">
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
           <div className="sm:col-span-2">
 

@@ -11,14 +11,14 @@
   --width-page: 6%
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
     --foreground-rgb: rgb(148, 163, 184);
     --background-start-rgb: rgb(22, 31, 44);
     --background-end-rgb: rgb(22, 31, 44);
   }
-}
+} */
 
 body {
   color: var(--foreground-rgb);

@@ -2,7 +2,7 @@ import NavPage from '@/components/NavPage'
 import ViewProducts from '@/components/ViewProducts'
 import { redirect } from 'next/navigation'
 
-export const revalidate = 3600
+export const revalidate = 2000
 const { NEXT_PUBLIC_DOMAIN } = process.env
 
 async function getProducts (name = '', page = '') {

@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
+  darkMode: ['class', '[data-mode="dark"]'],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -16,7 +17,7 @@ const config: Config = {
       gridTemplateColumns: {
         // Simple 16 column grid
         res: 'repeat(auto-fill, minmax(min(100%, 20rem), 1fr))',
-        products: 'repeat(auto-fill, minmax(min(100%, 15rem), 1fr))',
+        products: 'repeat(auto-fill, minmax(min(100%, 20em), 1fr))',
         res4x4: 'repeat(2, minmax(min(100%, 20rem), 1fr))',
         shop: '13rem 1fr'
       },
